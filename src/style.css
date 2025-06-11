@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+.form {
+    @apply px-12 py-4;
+}
+
+.form__fieldset {
+    @apply border border-gray-300 px-12 pt-4 pb-8 rounded-xl;
+}
+
+.form__fieldset__legend {
+    @apply text-xl text-gray-700 px-2;
+}
+
+.form__field {
+    @apply flex flex-col mb-4;
+}
+
+.form__field__label, .form__field__input__checkbox-radio-option {
+    @apply text-base text-gray-700;
+}
+
+.form__field__input__checkbox-radio-option {
+    @apply ml-2;
+}
+
+.form__field__input, .form__field__textarea, .form__field__select {
+    @apply border border-gray-300 rounded-lg py-2 px-4 text-base text-gray-900;
+}
+
+.form__field__errors {
+    @apply  mt-2;
+}
+
+.form__field__errors__item {
+    @apply text-base text-red-500;
+}
+
+.form__submit-button {
+    @apply bg-blue-500 text-xl text-white py-2 px-4 rounded-xl min-w-xs cursor-pointer hover:bg-blue-600;
+}
+
+
