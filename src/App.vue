@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useForm, REGEX } from "vue-gen-form-1"
+import { REGEX, useForm } from "vue-gen-form-1"
 import PasswordField from './components/PasswordField.vue'
 
 const formData = ref({
@@ -25,6 +25,7 @@ const MyForm = useForm({
         label: 'Email',
         type: 'email',
         component: 'input',
+        section: 'Email',
         modelValue: ref(formData.value.email),
         validation: [
           {
@@ -41,6 +42,7 @@ const MyForm = useForm({
         label: 'Password',
         type: 'password',
         component: PasswordField,
+        section: 'Password',
         modelValue: ref(formData.value.password),
         validation: [{
           role: 'required',
@@ -67,6 +69,7 @@ const MyForm = useForm({
         label: 'Repeat password',
         type: 'password',
         component: PasswordField,
+        section: 'Password',
         modelValue: ref(formData.value.repeatPassword),
         validation: [{
           role: 'required',

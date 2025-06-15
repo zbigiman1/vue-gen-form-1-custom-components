@@ -3,12 +3,14 @@
 .form {
     @apply px-12 py-4;
 }
-
 .form__fieldset {
-    @apply border border-gray-300 px-12 pt-4 pb-8 rounded-xl;
+    @apply py-4;
+}
+.form__section {
+    @apply border border-gray-300 px-12 pt-4 pb-8 rounded-xl mb-8;
 }
 
-.form__fieldset__legend {
+.form__fieldset__legend, .form__section__legend {
     @apply text-xl text-gray-700 px-2;
 }
 
