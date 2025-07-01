@@ -4,7 +4,7 @@
         <div class="w-full">
             <input class="form__field__input w-full" :name="name" :type="isShowPassword ? 'text' : type"
                 v-model="modelValue" @blur="onBlur">
-            <button type="button" @click="showPassword" class="absolute -ml-8 mt-3 cursor-pointer">
+            <button type="button" @click="toggleShowPassword" class="absolute -ml-8 mt-3 cursor-pointer">
                 <template v-if="isShowPassword">
                     <img src="/eye-slash.svg" alt="hide" class="w-5" />
                 </template>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, Ref, toRefs, watch } from 'vue'
+import { ref, Ref, toRefs, watch } from 'vue';
 
 const props = defineProps<{
     name: string
@@ -39,7 +39,7 @@ const emit = defineEmits(['update:modelValue'])
 
 const isShowPassword = ref(false)
 
-function showPassword() {
+function toggleShowPassword() {
     isShowPassword.value = !isShowPassword.value
 }
 
