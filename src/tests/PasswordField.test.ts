@@ -10,6 +10,7 @@ describe('PasswordField.vue', () => {
         props: {
             name: "password",
             label: "Password",
+            placeholder: "Password",
             modelValue: '',
             type: 'password',
             errors: [],

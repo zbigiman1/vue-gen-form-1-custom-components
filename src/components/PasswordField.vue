@@ -2,7 +2,7 @@
     <div class="form__field">
         <label class="form__field__label" :for="name">{{ label }}</label>
         <div class="w-full">
-            <input class="form__field__input w-full" :name="name" :placeholder="label" :type="isShowPassword ? 'text' : type"
+            <input class="form__field__input w-full" :name="name" :placeholder="placeholder" :type="isShowPassword ? 'text' : type"
                 v-model="modelValue" @blur="onBlur">
             <button type="button" @click="toggleShowPassword" class="absolute -ml-8 mt-3 cursor-pointer">
                 <template v-if="isShowPassword">
@@ -27,6 +27,7 @@ import { ref, Ref, toRefs, watch } from 'vue';
 const props = defineProps<{
     name: string
     label: string
+    placeholder?: string
     modelValue: any
     type: string
     errors: Ref<string[]>

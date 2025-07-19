@@ -23,6 +23,7 @@ const MyForm = useForm({
       {
         name: 'email',
         label: 'Email',
+        placeholder: 'Email',
         type: 'email',
         component: 'input',
         section: 'Email',
@@ -40,6 +41,7 @@ const MyForm = useForm({
       {
         name: 'password',
         label: 'Password',
+        placeholder: 'Enter password',
         type: 'password',
         component: PasswordField,
         section: 'Password',
@@ -67,6 +69,7 @@ const MyForm = useForm({
       {
         name: 'repeatPassword',
         label: 'Repeat password',
+        placeholder: 'Repeat password',
         type: 'password',
         component: PasswordField,
         section: 'Password',
